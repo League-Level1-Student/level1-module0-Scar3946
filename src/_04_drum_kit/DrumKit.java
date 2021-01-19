@@ -42,19 +42,40 @@ cheese.add(code);
 		// Eclipse project under "recipe package(drum_kit)".
 
 		// 8. Put the name of your image file in a String variable.
+String african = "africandrum.png";
+String mozart = "DrumMozart.jpg";
+String korean = "Koreandrum.jpg";
+String bongos = "bongo drum.jpeg";
 String dadrum  = "drum.png";
 		// 9. Edit the next line to use your String variable
-	drumLabelWithImage = createLabelImage(dadrum);
+drumLabelWithImage = createLabelImage(bongos);
+JLabel drumLabelWithImage2 = createLabelImage(dadrum);
+JLabel drumLabelWithImage3 = createLabelImage(korean);
+JLabel drumLabelWithImage4 = createLabelImage(mozart);
+JLabel drumLabelWithImage5 = createLabelImage(african);
+
+drumLabelWithImage2.setSize(100, 100);
+drumLabelWithImage3.setSize(100, 100);
+
 
 		// 10. Add the image to the panel
 code.add(drumLabelWithImage);
+code.add(drumLabelWithImage2);
+code.add(drumLabelWithImage3);
+code.add(drumLabelWithImage4);
+code.add(drumLabelWithImage5);
+
 		// 11. Set the layout of the panel to "new GridLayout()"
 code.setLayout(new GridLayout());
 		// 12. call the pack() method on the frame. Run your program. Do you see
 		// your drum image?
 cheese.pack();
 		// 13. add this mouse listener to drumLabelWithImage
- 
+drumLabelWithImage.addMouseListener(this);
+drumLabelWithImage2.addMouseListener(this);
+drumLabelWithImage3.addMouseListener(this);
+drumLabelWithImage4.addMouseListener(this);
+drumLabelWithImage5.addMouseListener(this);
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
 
