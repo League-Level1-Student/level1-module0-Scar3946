@@ -16,6 +16,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class DrumKit implements MouseListener {
@@ -91,9 +92,13 @@ drumLabelWithImage5.addMouseListener(this);
 
 		// 15. Download a drum sound and drop it into your "recipe package(drum_kit)".
 		// You can find it on freesound.org. To download it, log in as
-		// leagueofamazing/code4life.
+		// leagueofamazing/code4life.]]
 
 		// 16. If they clicked on the drumImage...
+		
+		if( drumClicked == drumLabelWithImage) {
+			JOptionPane.showMessageDialog(null, "Playing drum 1");
+		}
 
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works

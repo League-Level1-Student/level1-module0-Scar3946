@@ -51,25 +51,52 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
+		int score = 0 ;
 
 		// 2. Set the size of the window in the initializeGui() method 
-
+initializeGui();
 		// 4. Ask the user who this person is and store their answer
 		String guess = JOptionPane.showInputDialog("who is this?");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+if(guess.equalsIgnoreCase( "arnold s")){
+	JOptionPane.showMessageDialog(null, "correct"); score +=1;
+}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
+else {
+	JOptionPane.showMessageDialog(null," you are wrong the person is arnold schwarzenegger");
+}
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
+		
 
 		// 8. .... repeat 4-7 for all your images.....
-
+		String badmovieguy = JOptionPane.showInputDialog("who is this");
+		if (badmovieguy.equalsIgnoreCase( "leonardo d")) {
+			JOptionPane.showMessageDialog(null, "Correct"); score+=2 ;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "leoardo dcaprio"); 
+		
+	}
+		
+showNextImage();
+String goodactor = JOptionPane.showInputDialog("Who is this");
+if (goodactor.equalsIgnoreCase("morgan freeman")) {
+	JOptionPane.showMessageDialog(null, "correct"); score+=1;
+}
+else {
+	JOptionPane.showMessageDialog(null, "incorrect"); 
+}
+showNextImage();
+String rockguy = JOptionPane.showInputDialog("who is this");
+if (rockguy.equalsIgnoreCase("jack black")) {
+	JOptionPane.showMessageDialog(null, "correct"); score+=1;
+}
 		// 9. Show them their current score
-
+JOptionPane.showMessageDialog(null, "your score is "+ score);
 	}
 
 	public void showNextImage() {
