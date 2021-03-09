@@ -1,11 +1,13 @@
 package _08_jack_in_the_box;
 
+import java.applet.AudioClip;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JApplet;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -20,6 +22,7 @@ x+=1 ;
 if (x == 5) {
 JOptionPane.showMessageDialog(null, "woohoo");
 showPicture("jackInTheBox.png");
+playSound("homer-woohoo.wav");
 }
 	}
 
@@ -51,7 +54,7 @@ showPicture("jackInTheBox.png");
 	     }
 	}
 
-	private JLabel createLabelImage(String fileName) {
+	private JLabel createLabelImage(String fileName){
 	     try {
 	          URL imageURL = getClass().getResource(fileName);
 	          if (imageURL == null) {
@@ -67,5 +70,14 @@ showPicture("jackInTheBox.png");
 	          return new JLabel();
 	     }
 	}
+	private void playSound(String soundFile) { 
+	         try {
+	              AudioClip sound = JApplet.newAudioClip(getClass().getResource(soundFile));
+	              sound.play();
+	         } catch (Exception e) {
+	              e.printStackTrace();
+	         }
+	    }
+	}
 	
-}
+
