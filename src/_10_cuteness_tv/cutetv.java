@@ -2,10 +2,12 @@ package _10_cuteness_tv;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class cutetv implements ActionListener {
 	  @Override
@@ -15,6 +17,8 @@ public class cutetv implements ActionListener {
 	x+=1 ;
 	if (e.getSource()== cheese) {
  showDucks();
+ System.out.println("something");
+ 
 	}
 	if(e.getSource() == crocodile) {
 		showFrog();
@@ -37,10 +41,13 @@ int x = 0 ;
 		rame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	   
 		button.setText("the duck");
-		rame.add(button);
+		JPanel panel = new JPanel();
+		rame.add(panel);
+		panel.add(button);
 		rame.pack();
-		rame.add(cheese);
-		rame.add(crocodile);
+		panel.add(cheese);
+		panel.add(crocodile);
+		
 		
 	}
 	void showDucks() {
